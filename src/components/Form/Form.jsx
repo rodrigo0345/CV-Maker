@@ -6,6 +6,7 @@ export default function Form({changeHandler, saveHandler, loadExample, generateP
 
             <div className="form-header">
                 <h3>Personal information</h3>
+                <hr />
                 <input type="text" onChange={changeHandler} placeholder="First name" />
                 <input type="text" onChange={changeHandler} placeholder="Last name" />
                 <input type="text" onChange={changeHandler} placeholder="Position" />
@@ -13,23 +14,30 @@ export default function Form({changeHandler, saveHandler, loadExample, generateP
                 <input type="text" onChange={changeHandler} placeholder="Email" />
                 <input type="text" onChange={changeHandler} placeholder="Website" />
                 <input type="text" onChange={changeHandler} placeholder="City" />
-                <textarea type="text" onChange={changeHandler} placeholder="Description" maxlength="300"/>
+                <textarea type="text" onChange={changeHandler} placeholder="Description" maxLength="300"/>
             </div>
 
             <div className="experience">
                 <div className="experiences">
                     <h3>Experience</h3>
+                    <hr />
                     <input type="text" onChange={changeHandler} placeholder="Company" />
                     <input type="text" onChange={changeHandler} placeholder="Position" />
-                    <span className="start-pos">
-                        <p>Date of start</p>
-                        <input type="date" onChange={changeHandler} placeholder="Date of start" />
-                    </span>
-                    <span className="end-pos">
-                        <p>Date of end</p>
-                        <input type="date" onChange={changeHandler} placeholder="Date of end" />
-                    </span>
-                    <input type="text" onChange={changeHandler} placeholder="Description" />
+                    
+
+                    <div className="date">
+                        <span className="start-pos">
+                            <p>Date of start</p>
+                            <input type="date" onChange={changeHandler} placeholder="Date of start" />
+                        </span>
+                        <span className="end-pos">
+                            <p>Date of end</p>
+                            <input type="date" onChange={changeHandler} placeholder="Date of end" />
+                        </span>
+                    </div>
+
+
+                    <textarea type="text" maxLength="300" onChange={changeHandler} placeholder="Description" />
                     <div className="delete">
                         <button onClick={changeHandler}>Delete</button>
                     </div>
@@ -44,6 +52,7 @@ export default function Form({changeHandler, saveHandler, loadExample, generateP
                 
                 <div className="schools">
                     <h3>Education</h3>
+                    <hr />
                     <input type="text" onChange={changeHandler} placeholder="School" />
                     <input type="text" onChange={changeHandler} placeholder="Degree" />
                     <input type="text" onChange={changeHandler} placeholder="Field of study" />
@@ -63,6 +72,7 @@ export default function Form({changeHandler, saveHandler, loadExample, generateP
 
                 <div className="projects">
                     <h3>Projects</h3>
+                    <hr />
                     <input type="text" onChange={changeHandler} placeholder="Title" />
                     <input type="text" onChange={changeHandler} placeholder="Description" />
                     <input type="text" onChange={changeHandler} placeholder="Link" />

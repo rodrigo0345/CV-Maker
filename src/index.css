@@ -62,3 +62,16 @@ h1, h2, h3, h4, h5, h6{
 p, a, li, td, th, button{
     font-family: var(--p-font);
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--body-color-dark);
+    border-radius: 1rem;
+}

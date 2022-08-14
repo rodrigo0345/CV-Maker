@@ -1,5 +1,6 @@
 h3{
     font-size: 1.5rem;
+    padding: 10px 0;
 }
 
 p{
@@ -10,7 +11,7 @@ p{
 .form{
     margin: 20px;
     border-radius: 1rem;
-    max-width: 50vw;
+    max-width: 550px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -27,7 +28,60 @@ p{
 .experience{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 0;
+}
+
+    .experiences{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+        .date{
+            margin: 20px 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .delete{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .delete > button{
+                background-color: red;
+            }
+
+        .add{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .add > button{
+                background-color: rgb(0, 165, 0);
+            }
+
+button{
+    cursor: pointer;
+    margin: 5px 0;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.6;
 }
 
     input, textarea{
@@ -41,6 +95,7 @@ p{
         color: #ccc;
         transition: all 0.3s ease-in-out;
         border-width: 0;
+        max-width: 500px;
     }
 
     textarea{
@@ -56,3 +111,25 @@ p{
         input:focus-visible, textarea:focus-visible{
             outline: none;
         }
+
+.education{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+    .schools{
+        display: flex;
+        flex-direction: column;   
+    }
+
+.project{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
