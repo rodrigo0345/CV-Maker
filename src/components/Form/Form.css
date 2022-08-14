@@ -1,0 +1,58 @@
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.form{
+    margin: 20px;
+    border-radius: 1rem;
+    max-width: 50vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.form-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+    input, textarea{
+        margin: 4px 0;
+        border-radius: 5px;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #ccc;
+        transition: all 0.3s ease-in-out;
+        border-width: 0;
+    }
+
+    textarea{
+        height: 120px;
+        resize: none;
+    }
+    
+        input:focus, textarea:focus{
+            color: rgba(0, 0, 0, 0.671);
+            outline: white solid 4px;
+        }
+
+        input:focus-visible, textarea:focus-visible{
+            outline: none;
+        }
