@@ -1,5 +1,7 @@
 import Header from '../components/Header/Header.jsx';
 import Form from '../components/Form/Form.jsx';
+import CV from '../components/CV/CV.jsx';
+
 import new_user from '../Data/user.js';
 
 import { Component } from 'react';
@@ -86,6 +88,7 @@ class App extends Component {
         <Header />
         <Form changeHandler={this.changeHandler} saveHandler={this.saveHandler} loadExample={this.loadExample} generatePDF={this.generatePDF} experiences={this.state.experiences} schools={this.state.schools} projects={this.state.projects} />
 
+        <CV state={this.state} />
       </div>
     );
   }

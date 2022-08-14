@@ -73,7 +73,7 @@ button{
     border: none;
     border-radius: 5px;
     padding: 5px;
-    width: 300px;
+    width: 80%;
 }
 
 button:hover{
@@ -141,7 +141,13 @@ button:active{
     justify-content: center;
     align-items: center;
 }
-
+    .end div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .end button{
         background-color: rgb(102, 102, 102);
+        width: 80%;
     }
