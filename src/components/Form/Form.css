@@ -31,7 +31,7 @@ p{
     margin: 20px 0;
 }
 
-    .experiences{
+    .experiences, .experiences div{
         display: flex;
         flex-direction: column;
         
@@ -118,7 +118,7 @@ button:active{
     margin: 20px 0;
 }
 
-    .schools{
+    .schools, .schools div{
         display: flex;
         flex-direction: column;   
     }
@@ -128,8 +128,20 @@ button:active{
     flex-direction: column;
     margin: 20px 0;
 }
-    .projects{
+    .projects, .projects div{
         display: flex;
         flex-direction: column;
     }
 
+.end{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+    .end button{
+        background-color: rgb(102, 102, 102);
+    }
