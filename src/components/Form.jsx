@@ -1,4 +1,5 @@
 import '../styles/Form.css';
+import uniqid from 'uniqid';
 
 export default function Form({changes, experience, education})
 {
@@ -66,7 +67,7 @@ export default function Form({changes, experience, education})
         <form 
             id="form" 
             onChange={changes}
-            
+            key={uniqid()}
         >
             <h2>Personal information</h2>
             <hr />
@@ -81,12 +82,12 @@ export default function Form({changes, experience, education})
             <h2>Job experience/ Side projects</h2>
             <hr />
             {experiences()}
-            <button class="add" onClick={addExp}>Add</button>
+            <button className="add" onClick={addExp}>Add</button>
 
             <h2>Education</h2>
             <hr />
             {educations()}
-            <button class="add" onClick={addEdu}>Add</button>
+            <button className="add" onClick={addEdu}>Add</button>
 
             <button type="submit">Reset</button>
         </form>

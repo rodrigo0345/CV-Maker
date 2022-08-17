@@ -66,6 +66,11 @@ section{
             min-width: 49%;
             max-width: 50%;
             background-color: $blue;
+            overflow-y: hidden;
+        }
+
+        #preview{
+            background-color: white;
         }
     }
 
