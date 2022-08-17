@@ -1,4 +1,4 @@
-import App from './main/App';
+import App from './App';
 import React from 'react';
 import * as ReactDOM from 'react-dom/client';
 
