@@ -32,14 +32,6 @@ section{
             color: white;
             font-weight: 500;
         }
-
-        button:hover{
-            opacity: 0.8;
-        }
-
-        button:active{
-            opacity: 0.6;
-        }
     }
 
     @media (min-width: 900px)
@@ -53,26 +45,28 @@ section{
     .content{
         position: relative;
         display: flex;
-        width: 100%;
-        justify-content: space-around;
+        justify-content: start;
         align-items: center;
+        height: min(100vh);
+        width: 100%;
 
         #separator{
             position: absolute;
-            width: 3px;
+            margin-left: 3px;
+            margin-right: 3px;
             height: 100%;
             background-color: black;
             transform: rotate(0deg);
         }
 
         #form, #preview{
-            position: relative;
+            align-self: start;
             margin: 10px;
             min-height: 100vh;
-            width: 100%;
-            background-color: rgb(68, 68, 68);
+            min-width: 49%;
+            max-width: 50%;
+            background-color: $blue;
         }
-
     }
 
     @media (max-width: 900px)
@@ -86,4 +80,12 @@ section{
 
 .hide{
     visibility: hidden;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.6;
 }

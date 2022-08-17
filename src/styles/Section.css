@@ -26,12 +26,6 @@ section .buttons button {
   color: white;
   font-weight: 500;
 }
-section .buttons button:hover {
-  opacity: 0.8;
-}
-section .buttons button:active {
-  opacity: 0.6;
-}
 @media (min-width: 900px) {
   section .buttons {
     position: absolute;
@@ -41,23 +35,26 @@ section .buttons button:active {
 section .content {
   position: relative;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 section .content #separator {
   position: absolute;
-  width: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
   height: 100%;
   background-color: black;
   transform: rotate(0deg);
 }
 section .content #form, section .content #preview {
-  position: relative;
+  align-self: start;
   margin: 10px;
   min-height: 100vh;
-  width: 100%;
-  background-color: rgb(68, 68, 68);
+  min-width: 49%;
+  max-width: 50%;
+  background-color: #2C3D73;
 }
 @media (max-width: 900px) {
   section #form, section #preview, section #separator {
@@ -68,4 +65,12 @@ section .content #form, section .content #preview {
 
 .hide {
   visibility: hidden;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.6;
 }/*# sourceMappingURL=Section.css.map */

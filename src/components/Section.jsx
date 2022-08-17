@@ -6,6 +6,40 @@ import { useState } from 'react';
 export default function Section(){
 
     const [mainObject, setMainObject] = useState([]);
+    const experience = useState(1);
+    const education = useState(1);
+
+    function addExperience(){
+        experience[1](prev => prev + 1);
+    }
+
+    function subtractExperience(){
+        experience[1](prev => prev - 1);
+    }
+
+    function addEducation(){
+        education[1](prev => prev + 1);
+    }
+
+    function subtractEducation(){
+        education[1](prev => prev - 1);
+    }
+
+    function onChange(event){
+        const form = event.target;
+        console.log(form);
+        
+        const values = [];
+        const key = {} ;
+        key[form.name] = form.value;;
+
+        setMainObject(prevObj => {
+            return {
+                ...prevObj,
+                ...key
+            }
+        });
+    }
 
     function appear(e)
     {
@@ -42,11 +76,10 @@ export default function Section(){
 
             <div className="content">
                 <Form
-                    object={mainObject}
-                    setter={setMainObject}
+                    changes={onChange}
+                    experience={[experience[0], addExperience, subtractExperience]}
+                    education={[education[0], addEducation, subtractEducation]}
                 />
-
-                <hr id="separator" />
 
                 <Preview 
                     object={mainObject}
