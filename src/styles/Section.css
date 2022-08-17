@@ -1,1 +1,71 @@
-/*# sourceMappingURL=Section.css.map */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+section .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+section .buttons button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0.7rem;
+  outline-style: none;
+  border: none;
+  background-color: #2C3D73;
+  color: white;
+  font-weight: 500;
+}
+section .buttons button:hover {
+  opacity: 0.8;
+}
+section .buttons button:active {
+  opacity: 0.6;
+}
+@media (min-width: 900px) {
+  section .buttons {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+section .content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+section .content #separator {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  transform: rotate(0deg);
+}
+section .content #form, section .content #preview {
+  position: relative;
+  margin: 10px;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(68, 68, 68);
+}
+@media (max-width: 900px) {
+  section #form, section #preview, section #separator {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}/*# sourceMappingURL=Section.css.map */

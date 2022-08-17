@@ -7,6 +7,7 @@ header .intro {
   padding: 20px;
 }
 header .intro p {
+  text-align: center;
   color: white;
   max-width: 200px;
   line-height: 1.6em;
