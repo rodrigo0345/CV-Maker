@@ -5,8 +5,6 @@ export function dragOverContainer(e) {
   const afterElement = getDragAfterElement(container, e.clientY)
   const draggable = document.querySelector('.dragging')
 
-  console.log(draggable)
-
   if (afterElement == null) {
     container.appendChild(draggable)
   } else {
