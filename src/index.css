@@ -5,14 +5,21 @@
     --h-font: 'Ubuntu', sans-serif;
     --p-font: 'Quicksand', sans-serif;
 
-    --header-color-light: #979FA6;
+
+    --dark-blue: #031059;
+    --blue: #2C3D73;
+    --orange: #F24405;
+    --light-orange: #F2836B;
+    --gray: #F2F2F2;
+
+    --header-color-light: #F2F2F2;
     --body-color-light: #F2F2F2;
 
-    --section-color: #A68263;
-    --aside-color: #402A1E;
+    --section-color: #f2f2f2bb;
+    --aside-color: #F2836B;
 
-    --header-color-dark: #4d5052;
-    --body-color-dark: #222222d3;
+    --header-color-dark: #031059;
+    --body-color-dark: #2C3D73;
 }
 
 @media (prefers-color-scheme: light)
@@ -29,11 +36,10 @@
 @media (prefers-color-scheme: dark)
 {
     body{
-        background-color: var(--body-color-dark);
-        color: var(--body-color-light);
+        background-color: var(--gray);
     }
     header{
-        background-color: var(--header-color-dark);  
+        background-color: var(--gray);  
     }
 }
 
@@ -57,6 +63,8 @@ html{
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--h-font);
+    font-weight: 600;
+    color: var(--orange)
 }
 
 p, a, li, td, th, button{

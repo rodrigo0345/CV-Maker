@@ -1,0 +1,36 @@
+header .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f2846b;
+  padding: 20px;
+}
+header .intro p {
+  color: white;
+  max-width: 200px;
+  line-height: 1.6em;
+}
+@media (max-width: 300px) {
+  header img, header .intro {
+    display: none;
+  }
+}
+
+header .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-height: 150px;
+  max-height: 2em;
+}
+header .brand img {
+  width: 4em;
+  height: 4em;
+}
+header .brand h1 {
+  overflow-x: auto;
+  font-size: 2.2em;
+  margin: 0;
+}/*# sourceMappingURL=Header.css.map */
