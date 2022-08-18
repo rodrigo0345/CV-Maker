@@ -1,5 +1,4 @@
 import '../styles/Form.css';
-import uniqid from 'uniqid';
 
 export default function Form({changes, experience, education})
 {
@@ -27,7 +26,7 @@ export default function Form({changes, experience, education})
                     <input type="text" name={`jobCompany-${i}`} placeholder="Company"/>
                     <input type="text" name={`jobCity-${i}`} placeholder="City"/>
                     <input type="date" name={`jobStart-${i}`} placeholder="Start date" max={`${year}-${month}-${date}`}/>
-                    <input type="date" name={`jobEnd-${i}`} placeholder="End date" max={`${date}-${month}-${year}`}/>
+                    <input type="date" name={`jobEnd-${i}`} placeholder="End date" max={`${day}-${month}-${year}`}/>
 
                     <button onClick={subExp}>Delete</button>
                 </div>
@@ -51,7 +50,7 @@ export default function Form({changes, experience, education})
                 <div id={`education-${i}`} className={'education'}>
                     <input type="text" name={`eduDegree-${i}`} placeholder="Degree"/>
                     <input type="text" name={`eduUniversity-${i}`} placeholder="University"/>
-                    <input type="date" name={`eduStart-${i}`} placeholder="Start date" max={`${date}-${month}-${year}`}/>
+                    <input type="date" name={`eduStart-${i}`} placeholder="Start date" max={`${day}-${month}-${year}`}/>
                     <input type="date" name={`eduEnd-${i}`} placeholder="End date"/>
 
                     <button onClick={subEdu}>Delete</button>
@@ -67,7 +66,6 @@ export default function Form({changes, experience, education})
         <form 
             id="form" 
             onChange={changes}
-            key={uniqid()}
         >
             <h2>Personal information</h2>
             <hr />

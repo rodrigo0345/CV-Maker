@@ -1,7 +1,6 @@
 import '../styles/Preview.css';
 import '../styles/DragAndDrop.css';
 import {dragOverContainer, dragStart, dragEnd} from '../logic/dragAndDrop.js';
-import uniqid from 'uniqid';
 
 export default function Preview({object})
 {   

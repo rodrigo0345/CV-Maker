@@ -35,7 +35,7 @@ section .buttons button {
 section .content {
   position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -49,7 +49,7 @@ section .content #separator {
   transform: rotate(0deg);
 }
 section .content #form, section .content #preview {
-  align-self: start;
+  align-self: flex-start;
   margin: 10px;
   min-height: 100vh;
   min-width: 49%;
