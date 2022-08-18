@@ -1,4 +1,6 @@
 import '../styles/Form.css';
+import HtmlToPdf from '../logic/HtmlToPdf';
+import { useReactToPrint } from 'react-to-print'
 
 export default function Form({changes, experience, education})
 {
@@ -25,8 +27,8 @@ export default function Form({changes, experience, education})
                     <input type="text" name={`jobTitle-${i}`} placeholder="Job title"/>
                     <input type="text" name={`jobCompany-${i}`} placeholder="Company"/>
                     <input type="text" name={`jobCity-${i}`} placeholder="City"/>
-                    <input type="date" name={`jobStart-${i}`} placeholder="Start date" max={`${year}-${month}-${date}`}/>
-                    <input type="date" name={`jobEnd-${i}`} placeholder="End date" max={`${day}-${month}-${year}`}/>
+                    <input type="date" name={`jobStart-${i}`} placeholder="Start date" max={`${day}-${month}-${year}`}/>
+                    <input type="date" name={`jobEnd-${i}`} placeholder="End date"/>
 
                     <button onClick={subExp}>Delete</button>
                 </div>
@@ -88,6 +90,8 @@ export default function Form({changes, experience, education})
             <button className="add" onClick={addEdu}>Add</button>
 
             <button type="submit">Reset</button>
+
+            <button onClick={HtmlToPdf}>Download Pdf</button>
         </form>
     )
 }

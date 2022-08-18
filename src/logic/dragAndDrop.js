@@ -1,9 +1,12 @@
 export function dragOverContainer(e) {
-  e.preventDefault()
+  e.preventDefault();
+  e.stopPropagation();
 
-  const container = e.target;
+  const draggable = document.getElementsByClassName('dragging')[0];
+  let container = e.target;
+  if(container == draggable) { container = draggable.parentNode }
+
   const afterElement = getDragAfterElement(container, e.clientY, e.ClientX)
-  const draggable = document.querySelector('.dragging')
 
   if (afterElement == null) {
     container.appendChild(draggable)
@@ -29,12 +32,7 @@ function getDragAfterElement(container, y, x) {
     const offsetX = x - box.left - box.width / 2
 
     let offset;
-    if(offsetY < offsetX){
-      offset = offsetX;
-    }
-    else { 
-      offset = offsetY; 
-    }
+    offsetY < offsetX? offset = offsetX : offset = offsetY;
 
     if ((offset < 0 && offset > closest.offset)) {
       return { offset: offset, element: child }

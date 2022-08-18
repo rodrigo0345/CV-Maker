@@ -37,7 +37,7 @@ section .content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 section .content #separator {
@@ -48,17 +48,21 @@ section .content #separator {
   background-color: black;
   transform: rotate(0deg);
 }
+section .content #form {
+  background-color: #2C3D73;
+}
 section .content #form, section .content #preview {
   align-self: flex-start;
   margin: 10px;
   min-height: 100vh;
   min-width: 49%;
   max-width: 50%;
-  background-color: #2C3D73;
   overflow-y: hidden;
 }
 section .content #preview {
-  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 @media (max-width: 900px) {
   section #form, section #preview, section #separator {

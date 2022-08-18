@@ -1,59 +1,189 @@
+$dark-blue: #031059;
+$blue: #2C3D73;
+$orange: #F24405;
+$light-orange: #f2846b;
+$gray: #F2F2F2;
 
 .frame{
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
-    height: 98%;
-    width: 100%;
-    color: white;
+    background-color: white;
+    height: 1123px;
+    width: 794px;
 
     .preview-header{
         min-height: 20px;
-        background-color: black;
+        
         position: relative;
+        resize: vertical;
+        overflow: hidden;
+
+        background-color: $orange;
+        padding: 20px;
     }
 
     .preview-wrapper{
-        display: flex;
+        display: grid;
+        grid-template-columns: .1fr 1fr .1fr;
+        grid-template-rows: 1fr;
         height: 100%;
-        width: 100%;
+        max-width: 100%;
+        position: relative;
 
         .preview-left{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
-            background-color: rgb(0, 94, 94);
+            
             height: 100%;
-            width: max-content;
-            padding: 10px;
+            padding: 20px;
             position: relative;
+            width: max-content;
+            max-width: 200px;
         }
     
         .preview-main{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
-            background-color: rgb(164, 0, 0);
+            gap: 20px;
             height: 100%;
-            width: 100%;
-            padding: 10px;
+            padding: 20px;
             position: relative;
+            max-width: 723px;
+            min-width: fit-content;
         }
     
         .preview-right{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
-            background-color: rgb(0, 133, 38);
+            gap: 20px;
+            background-color: $blue;
             height: 100%;
-            width: max-content;
-            padding: 10px;
+            padding: 20px;
             position: relative;
+            width: fit-content;
+            max-width: 200px;
         }
     }
 
     .preview-footer{
         min-height: 20px;
-        background-color: black;
         height: fit-content;
         width: 100%;
     }
 
+    p{
+        width: fit-content;
+        white-space: wrap;
+    }
+
+    .name{
+        color: white;
+        max-width: 400px;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .title{
+        color: white;
+        max-width: 400px;
+        font-size: 1.7em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .email{
+        color: white;
+        max-width: 400px;
+        font-size: .8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .phone{
+        color: white;
+        max-width: 400px;
+        font-size: .8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .city{
+        color: white;
+        max-width: 400px;
+        font-size: .8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .about-me, .education, .experience{
+        color: black;
+        max-width: 400px;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    hr{
+        margin-bottom: 10px;
+    }
+
+    .description{ 
+        font-weight: bold;
+        margin-left: 5px;   
+    }
+
+    .description::before{
+        content: "•";
+        margin-right: 5px;
+    }
+
+    .experienceContent{
+        margin-top: 10px;
+        font-weight: 500;
+        margin-left: 5px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+    .title-t{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        .jobTitle{
+            font-weight: bold;
+            margin-left: 5px;       
+        }
+
+        .date{
+            margin-left: 5px;
+            font-weight: light;
+        }
+
+        .jobTitle::before{
+            content: "-";
+            margin-right: 5px;
+        }
+        
+    }
+
+    .jobCompanyWrap{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        .jobCompany{
+            font-weight: 600;
+        }
+        .jobCompany::before{
+            content: '';
+            margin-right: 5px;
+        }
+    }
+    
+    
 }

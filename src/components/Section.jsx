@@ -82,7 +82,8 @@ export default function Section(){
 
                 <Preview 
                     object={mainObject}
-                    setter={setMainObject}
+                    experience={experience[0]}
+                    education={education[0]}
                 />
             </div>
 
