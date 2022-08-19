@@ -9,19 +9,23 @@ export default function Section(){
     const experience = useState(1);
     const education = useState(1);
 
-    function addExperience(){
+    function addExperience(e){
+        e.preventDefault();
         experience[1](prev => prev + 1);
     }
 
-    function subtractExperience(){
+    function subtractExperience(e){
+        e.preventDefault();
         experience[1](prev => prev - 1);
     }
 
-    function addEducation(){
+    function addEducation(e){
+        e.preventDefault();
         education[1](prev => prev + 1);
     }
 
-    function subtractEducation(){
+    function subtractEducation(e){
+        e.preventDefault();
         education[1](prev => prev - 1);
     }
 

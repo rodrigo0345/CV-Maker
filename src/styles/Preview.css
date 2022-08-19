@@ -56,9 +56,9 @@
   height: 100%;
   padding: 20px;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   max-width: 200px;
 }
 .frame .preview-footer {
@@ -74,6 +74,9 @@
   width: fit-content;
   white-space: wrap;
 }
+.frame p:active, .frame div:active {
+  border: 1px solid #F24405;
+}
 .frame .name {
   color: white;
   max-width: 400px;
@@ -88,24 +91,48 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
-.frame .email {
+.frame .email-wrapper {
+  max-width: 400px;
+}
+.frame .email-wrapper .email {
+  color: white;
+  max-width: 400px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.frame .email-wrapper .email-tag {
+  color: white;
+  max-width: 400px;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.frame .phone-wrapper .phone {
   color: white;
   max-width: 400px;
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.frame .phone {
+.frame .phone-wrapper .phone-tag {
+  color: white;
+  max-width: 400px;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.frame .city-wrapper .city {
   color: white;
   max-width: 400px;
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.frame .city {
+.frame .city-wrapper .city-tag {
   color: white;
   max-width: 400px;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -126,7 +153,7 @@
   content: "•";
   margin-right: 5px;
 }
-.frame .experienceContent {
+.frame .experienceContent, .frame .educationContent {
   margin-top: 10px;
   font-weight: 500;
   margin-left: 5px;
@@ -139,7 +166,7 @@
   display: flex;
   align-items: center;
 }
-.frame .title-t .jobTitle {
+.frame .title-t .jobTitle, .frame .title-t .eduDegree {
   font-weight: bold;
   margin-left: 5px;
 }
@@ -147,19 +174,19 @@
   margin-left: 5px;
   font-weight: light;
 }
-.frame .title-t .jobTitle::before {
+.frame .title-t .jobTitle::before, .frame .title-t .eduDegree::before {
   content: "-";
   margin-right: 5px;
 }
-.frame .jobCompanyWrap {
+.frame .jobCompanyWrap, .frame .eduUniversityWrap {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
-.frame .jobCompanyWrap .jobCompany {
+.frame .jobCompanyWrap .jobCompany, .frame .jobCompanyWrap .eduUniversity, .frame .eduUniversityWrap .jobCompany, .frame .eduUniversityWrap .eduUniversity {
   font-weight: 600;
 }
-.frame .jobCompanyWrap .jobCompany::before {
+.frame .jobCompanyWrap .jobCompany::before, .frame .jobCompanyWrap .eduUniversity::before, .frame .eduUniversityWrap .jobCompany::before, .frame .eduUniversityWrap .eduUniversity::before {
   content: "";
   margin-right: 5px;
 }/*# sourceMappingURL=Preview.css.map */

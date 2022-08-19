@@ -37,12 +37,14 @@ export default function Preview({object, experience, education})
                             <p>Company:</p>
                             <p className='jobCompany'>{object[`jobCompany-${i}`]}</p>
                         </p>}
+
                         {object[`jobCity-${i}`] &&
-                        <p className='jobCity draggable'
+                        <p className='jobCompanyWrap draggable'
                         onDragStart={dragStart}
                         onDragEnd={dragEnd}
                         draggable="true">
-                            Location: {object[`jobCity-${i}`]}
+                            <p>Location:</p>
+                            <p className='jobCompany'>{object[`jobCity-${i}`]}</p>
                         </p>}
                         
                     </div>
@@ -60,23 +62,34 @@ export default function Preview({object, experience, education})
         {
             const html = (
                 <div>
-                    {object[`eduDegree-${i}`] &&
-                        <p className='eduDegree draggable'
-                        onDragStart={dragStart}
-                        onDragEnd={dragEnd}
-                        draggable="true">
-                            {object[`eduDegree-${i}`]}
+                    <div className="title-t">
+                        {object[`eduDegree-${i}`] &&
+                            <p className='eduDegree draggable'
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true">
+                                {object[`eduDegree-${i}`]}
+                            </p>}
+                        {object[`jobStart-${i}`] &&
+                        <p className='date draggable'
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true">
+                            ({object[`jobStart-${i}`]} {object[`jobEnd-${i}`]})
                         </p>}
+                    </div>
+                    
                     <div className={'educationContent'} onDragOver={dragOverContainer}>
                     
-                    
-                        {object[`eduUniversity-${i}`] &&
-                        <p className='eduUniversity draggable'
-                        onDragStart={dragStart}
-                        onDragEnd={dragEnd}
-                        draggable="true">
-                            University: {object[`eduUniversity-${i}`]}
-                        </p>}
+                        {object[`eduUniversity-${i}`] && 
+                            <div className="eduUniversityWrap">    
+                            <p className='eduUniversity draggable'
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true">
+                                University: {object[`eduUniversity-${i}`]}
+                            </p>
+                        </div>}
                         
                     </div>
                 </div>
@@ -114,8 +127,7 @@ export default function Preview({object, experience, education})
                     </div>
                     <div className='preview-main' onDragOver={dragOverContainer}>
             
-                        {object.description &&
-                                            (<div className="about draggable"
+                        {object.description && (<div className="about draggable"
                                                 onDragStart={dragStart}
                                                 onDragEnd={dragEnd}
                                                 draggable="true"
@@ -153,21 +165,34 @@ export default function Preview({object, experience, education})
                     </div>
                     <div className='preview-right' onDragOver={dragOverContainer}>
             
-                        {object.email && <p className="draggable email"
-                                            onDragStart={dragStart}
-                                            onDragEnd={dragEnd}
-                                            draggable="true"
-                                            >Email: {object.email}</p>}
-                        {object.phone && <p className="draggable phone"
-                                            onDragStart={dragStart}
-                                            onDragEnd={dragEnd}
-                                            draggable="true"
-                                            >Phone number: {object.phone}</p>}
-                        {object.city && <p className="draggable city"
-                                            onDragStart={dragStart}
-                                            onDragEnd={dragEnd}
-                                            draggable="true"
-                                            >City: {object.city}</p>}
+                        {object.email &&<div className="email-wrapper draggable"
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true"
+                        >
+                            <p className="email-tag">Email</p>
+                            {object.email && <p className="email">{object.email}</p>}
+                        </div>}
+
+
+                        {object.phone && <div className="phone-wrapper draggable"
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true"
+                        >
+                            <p className="phone-tag">Phone</p>
+                            <p className='phone'>{object.phone}</p>
+                        </div>}
+
+                        {object.city && <div className="city-wrapper draggable"
+                            onDragStart={dragStart}
+                            onDragEnd={dragEnd}
+                            draggable="true"
+                        >
+                            <p className="city-tag">City</p>
+                            {object.city && <p className='city'>{object.city}</p>}
+                        </div>}
+
                     </div>
                 </div>
                 <div className='preview-footer' onDragOver={dragOverContainer}>

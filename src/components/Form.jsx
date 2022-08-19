@@ -82,12 +82,12 @@ export default function Form({changes, experience, education})
             <h2>Job experience/ Side projects</h2>
             <hr />
             {experiences()}
-            <button className="add" onClick={addExp}>Add</button>
+            <button className="add" type="none" onClick={addExp}>Add</button>
 
             <h2>Education</h2>
             <hr />
             {educations()}
-            <button className="add" onClick={addEdu}>Add</button>
+            <button className="add" type="none" onClick={addEdu}>Add</button>
 
             <button type="submit">Reset</button>
 

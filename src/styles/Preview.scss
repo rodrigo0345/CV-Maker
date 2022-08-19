@@ -63,7 +63,7 @@ $gray: #F2F2F2;
             height: 100%;
             padding: 20px;
             position: relative;
-            width: fit-content;
+            width: max-content;
             max-width: 200px;
         }
     }
@@ -77,6 +77,10 @@ $gray: #F2F2F2;
     p{
         width: fit-content;
         white-space: wrap;
+    }
+
+    p:active, div:active{
+        border: 1px solid $orange;
     }
 
     .name{
@@ -95,29 +99,65 @@ $gray: #F2F2F2;
         margin-bottom: 10px;
     }
 
-    .email{
-        color: white;
+    .email-wrapper{
+
         max-width: 400px;
-        font-size: .8em;
-        font-weight: bold;
-        margin-bottom: 10px;
+
+        .email{
+            color: white;
+            max-width: 400px;
+            font-size: .8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .email-tag{
+            color: white;
+            max-width: 400px;
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     }
 
-    .phone{
-        color: white;
-        max-width: 400px;
-        font-size: .8em;
-        font-weight: bold;
-        margin-bottom: 10px;
+    .phone-wrapper{
+
+        .phone{
+            color: white;
+            max-width: 400px;
+            font-size: .8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .phone-tag{
+            color: white;
+            max-width: 400px;
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     }
 
-    .city{
-        color: white;
-        max-width: 400px;
-        font-size: .8em;
-        font-weight: bold;
-        margin-bottom: 10px;
+    .city-wrapper{
+            
+            .city{
+                color: white;
+                max-width: 400px;
+                font-size: .8em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .city-tag{
+                color: white;
+                max-width: 400px;
+                font-size: 1em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
     }
+
 
     .about-me, .education, .experience{
         color: black;
@@ -140,21 +180,21 @@ $gray: #F2F2F2;
         margin-right: 5px;
     }
 
-    .experienceContent{
+    .experienceContent, .educationContent{
         margin-top: 10px;
         font-weight: 500;
         margin-left: 5px; 
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-
     }
+
     .title-t{
         margin-top: 10px;
         display: flex;
         align-items: center;
 
-        .jobTitle{
+        .jobTitle, .eduDegree{
             font-weight: bold;
             margin-left: 5px;       
         }
@@ -164,26 +204,25 @@ $gray: #F2F2F2;
             font-weight: light;
         }
 
-        .jobTitle::before{
+        .jobTitle::before, .eduDegree::before{
             content: "-";
             margin-right: 5px;
         }
         
     }
 
-    .jobCompanyWrap{
+    .jobCompanyWrap, .eduUniversityWrap{
         display: flex;
         align-items: center;
         margin-left: 10px;
 
-        .jobCompany{
+        .jobCompany, .eduUniversity{
             font-weight: 600;
         }
-        .jobCompany::before{
+        .jobCompany::before, .eduUniversity::before{
             content: '';
             margin-right: 5px;
         }
     }
-    
-    
+
 }
