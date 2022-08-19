@@ -51,6 +51,10 @@ aside{
     background-color: var(--aside-color);
 }
 
+textarea{
+    font-family: var(--h-font);
+}
+
 *{
     margin: 0;
     padding: 0;
