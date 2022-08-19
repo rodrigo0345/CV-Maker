@@ -1,9 +1,34 @@
 import '../styles/Preview.css';
 import '../styles/DragAndDrop.css';
 import {dragOverContainer, dragStart, dragEnd} from '../logic/dragAndDrop.js';
+import Customize from './CustomizePreview';
+import { useState } from 'react';
 
 export default function Preview({object, experience, education})
 {   
+
+    /*$dark-blue: #031059;
+    $blue: ;
+    $orange: #F24405;
+    $light-orange: #f2846b;
+    $gray: #F2F2F2;
+    */
+
+    const [enableCustomize, setEnableCustomize] = useState(false);
+    const [settings, setSettings] = useState({
+            mainColor: '#F24405',
+            secondaryColor: '#2C3D73',
+            ternaryColor: '#ffffff',
+            fontTitleColor: '#ffffff',
+            fontTextColor: '#000000',
+            fontSubTextColor: '#ffffff',
+    });
+
+    function toggleCustomize()
+    {
+        setEnableCustomize(prev => !prev);
+    }
+
     function displayExperience(){
         const layout = [];
         for(let i = 0; i < experience; i++)
@@ -48,6 +73,15 @@ export default function Preview({object, experience, education})
                         </p>}
                         
                     </div>
+
+                    {object[`jobDescription-${i}`] &&
+                        <p className='description-wrap draggable'
+                        onDragStart={dragStart}
+                        onDragEnd={dragEnd}
+                        draggable="true">
+                            <p>Description:</p>
+                            <p className='description'>{object[`jobDescription-${i}`]}</p>
+                    </p>}
                 </div>
             );
             layout.push(html);
@@ -92,6 +126,15 @@ export default function Preview({object, experience, education})
                         </div>}
                         
                     </div>
+
+                    {object[`eduDescription-${i}`] &&
+                        <p className='description-wrap draggable'
+                        onDragStart={dragStart}
+                        onDragEnd={dragEnd}
+                        draggable="true">
+                            <p>Description:</p>
+                            <p className='description'>{object[`eduDescription-${i}`]}</p>
+                    </p>}
                 </div>
             );
             layout.push(html);
@@ -101,9 +144,14 @@ export default function Preview({object, experience, education})
 
     return (
         <div id="preview">
+            <div className="customization">
+                    <abbr title="customize CV"><button onClick={toggleCustomize} id="enableSettings"></button></abbr>
+                    <Customize enabled={enableCustomize} settings={settings} setSettings={setSettings}/>
+            </div>
+
             <div className="frame" id="printable">
-                <div className="customization"></div>
-                <div className='preview-header' onDragOver={dragOverContainer}>
+                <div className='preview-header' onDragOver={dragOverContainer} 
+                    style={{backgroundColor: settings.mainColor, color: settings.fontTitleColor}}>
                     {object.name && <p className="draggable name"
                                         onDragStart={dragStart}
                                         onDragEnd={dragEnd}
@@ -122,10 +170,14 @@ export default function Preview({object, experience, education})
                 </div>
                 <div className="preview-wrapper">
             
-                    <div className='preview-left'  onDragOver={dragOverContainer}>
+                    <div className='preview-left'  
+                            onDragOver={dragOverContainer} 
+                            style={{backgroundColor: settings.ternaryColor}}
+                    >
             
                     </div>
-                    <div className='preview-main' onDragOver={dragOverContainer}>
+                    <div className='preview-main' onDragOver={dragOverContainer}
+                    style={{color: settings.fontTextColor}}>
             
                         {object.description && (<div className="about draggable"
                                                 onDragStart={dragStart}
@@ -133,7 +185,7 @@ export default function Preview({object, experience, education})
                                                 draggable="true"
                                                 onDragOver={dragOverContainer}>
                                                 <p className='about-me'>About me</p>
-                                                <hr />
+                                                <hr/>
                                                 <p
                                                 className="description draggable"
                                                 onDragStart={dragStart}
@@ -163,7 +215,8 @@ export default function Preview({object, experience, education})
                                                 {displayEducation()}
                                             </div>)}
                     </div>
-                    <div className='preview-right' onDragOver={dragOverContainer}>
+                    <div className='preview-right' onDragOver={dragOverContainer} 
+                    style={{backgroundColor: settings.secondaryColor, color: settings.fontSubTextColor}}>
             
                         {object.email &&<div className="email-wrapper draggable"
                             onDragStart={dragStart}
@@ -195,7 +248,8 @@ export default function Preview({object, experience, education})
 
                     </div>
                 </div>
-                <div className='preview-footer' onDragOver={dragOverContainer}>
+                <div className='preview-footer' onDragOver={dragOverContainer}
+                style={{backgroundColor: settings.mainColor, color: settings.fontTitleColor}}>
                 </div>
             
             </div>

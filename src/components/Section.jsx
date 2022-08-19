@@ -31,8 +31,7 @@ export default function Section(){
 
     function onChange(event){
         const form = event.target;
-        console.log(form);
-    
+
         const key = {} ;
         key[form.name] = form.value;;
 

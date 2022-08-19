@@ -29,6 +29,7 @@ export default function Form({changes, experience, education})
                     <input type="text" name={`jobCity-${i}`} placeholder="City"/>
                     <input type="date" name={`jobStart-${i}`} placeholder="Start date" max={`${day}-${month}-${year}`}/>
                     <input type="date" name={`jobEnd-${i}`} placeholder="End date"/>
+                    <textarea name={`jobDescription-${i}`} placeholder='Description' />
 
                     <button onClick={subExp}>Delete</button>
                 </div>
@@ -54,6 +55,7 @@ export default function Form({changes, experience, education})
                     <input type="text" name={`eduUniversity-${i}`} placeholder="University"/>
                     <input type="date" name={`eduStart-${i}`} placeholder="Start date" max={`${day}-${month}-${year}`}/>
                     <input type="date" name={`eduEnd-${i}`} placeholder="End date"/>
+                    <textarea name={`eduDescription-${i}`} placeholder='Description' />
 
                     <button onClick={subEdu}>Delete</button>
                 </div>

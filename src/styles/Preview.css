@@ -1,5 +1,32 @@
 @charset "UTF-8";
+#preview {
+  position: relative;
+}
+
+#enableSettings {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-image: url("../assets/icons8-settings-64.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#enableSettings abbr {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
 .frame {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -13,6 +40,15 @@
   overflow: hidden;
   background-color: #F24405;
   padding: 20px;
+}
+.frame .description-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 .frame .preview-wrapper {
   display: grid;
@@ -67,6 +103,7 @@
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
+  padding: 10px;
 }
 .frame p {
   width: -webkit-fit-content;
@@ -78,14 +115,12 @@
   border: 1px solid #F24405;
 }
 .frame .name {
-  color: white;
   max-width: 400px;
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .title {
-  color: white;
   max-width: 400px;
   font-size: 1.7em;
   font-weight: bold;
@@ -95,49 +130,42 @@
   max-width: 400px;
 }
 .frame .email-wrapper .email {
-  color: white;
   max-width: 400px;
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 5px;
 }
 .frame .email-wrapper .email-tag {
-  color: white;
   max-width: 400px;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .phone-wrapper .phone {
-  color: white;
   max-width: 400px;
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .phone-wrapper .phone-tag {
-  color: white;
   max-width: 400px;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .city-wrapper .city {
-  color: white;
   max-width: 400px;
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .city-wrapper .city-tag {
-  color: white;
   max-width: 400px;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .frame .about-me, .frame .education, .frame .experience {
-  color: black;
   max-width: 400px;
   font-size: 1.6em;
   font-weight: bold;
@@ -146,7 +174,7 @@
   margin-bottom: 10px;
 }
 .frame .description {
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 5px;
 }
 .frame .description::before {
@@ -158,8 +186,14 @@
   font-weight: 500;
   margin-left: 5px;
   display: grid;
+}
+.frame .experienceContent {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+.frame .educationContent {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .frame .title-t {
   margin-top: 10px;

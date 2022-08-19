@@ -4,7 +4,35 @@ $orange: #F24405;
 $light-orange: #f2846b;
 $gray: #F2F2F2;
 
+
+#preview{
+    position: relative;
+}
+
+#enableSettings{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url('../assets/icons8-settings-64.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    abbr{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .frame{
+    animation: fadeIn 1s;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -20,6 +48,16 @@ $gray: #F2F2F2;
 
         background-color: $orange;
         padding: 20px;
+    }
+
+    .description-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+        margin-top: 5px;
     }
 
     .preview-wrapper{
@@ -72,6 +110,7 @@ $gray: #F2F2F2;
         min-height: 20px;
         height: fit-content;
         width: 100%;
+        padding: 10px;
     }
 
     p{
@@ -84,7 +123,6 @@ $gray: #F2F2F2;
     }
 
     .name{
-        color: white;
         max-width: 400px;
         font-size: 2.5em;
         font-weight: bold;
@@ -92,7 +130,6 @@ $gray: #F2F2F2;
     }
 
     .title{
-        color: white;
         max-width: 400px;
         font-size: 1.7em;
         font-weight: bold;
@@ -104,7 +141,6 @@ $gray: #F2F2F2;
         max-width: 400px;
 
         .email{
-            color: white;
             max-width: 400px;
             font-size: .8em;
             font-weight: bold;
@@ -112,7 +148,6 @@ $gray: #F2F2F2;
         }
 
         .email-tag{
-            color: white;
             max-width: 400px;
             font-size: 1em;
             font-weight: bold;
@@ -123,7 +158,6 @@ $gray: #F2F2F2;
     .phone-wrapper{
 
         .phone{
-            color: white;
             max-width: 400px;
             font-size: .8em;
             font-weight: bold;
@@ -131,7 +165,6 @@ $gray: #F2F2F2;
         }
 
         .phone-tag{
-            color: white;
             max-width: 400px;
             font-size: 1em;
             font-weight: bold;
@@ -142,7 +175,6 @@ $gray: #F2F2F2;
     .city-wrapper{
             
             .city{
-                color: white;
                 max-width: 400px;
                 font-size: .8em;
                 font-weight: bold;
@@ -150,7 +182,6 @@ $gray: #F2F2F2;
             }
 
             .city-tag{
-                color: white;
                 max-width: 400px;
                 font-size: 1em;
                 font-weight: bold;
@@ -160,7 +191,6 @@ $gray: #F2F2F2;
 
 
     .about-me, .education, .experience{
-        color: black;
         max-width: 400px;
         font-size: 1.6em;
         font-weight: bold;
@@ -171,7 +201,7 @@ $gray: #F2F2F2;
     }
 
     .description{ 
-        font-weight: bold;
+        font-weight: 600;
         margin-left: 5px;   
     }
 
@@ -185,8 +215,16 @@ $gray: #F2F2F2;
         font-weight: 500;
         margin-left: 5px; 
         display: grid;
+    }
+
+    .experienceContent{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .educationContent{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .title-t{
