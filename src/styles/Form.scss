@@ -1,10 +1,11 @@
 form{
+    max-width: 800px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 30px;
 
     h2{
-        font-size: 2em;
+        font-size: 1.8em;
         margin-bottom: 1rem;
         color: white;
     }
@@ -16,14 +17,17 @@ form{
 
     input, textarea{
         background-color: rgba(255, 255, 255, 0.74);
-        border-radius: 5px;
-        font-size: 1.8em;
+        font-size: 1.5em;
         padding: 3px;
         resize: none;
         width: 100%;
         margin-bottom: 1rem;
         outline: none;
         border: none;
+    }
+
+    input[type="date"]{
+        cursor: pointer;
     }
 
     textarea{
@@ -41,8 +45,7 @@ form{
         justify-content: center;
 
         button{
-            background-color: rgba(255, 0, 0, 0.87);
-            
+            background-color: rgba(255, 0, 0, 0.87);   
         }
     }
 

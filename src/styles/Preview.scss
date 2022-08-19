@@ -4,11 +4,6 @@ $orange: #F24405;
 $light-orange: #f2846b;
 $gray: #F2F2F2;
 
-
-#preview{
-    position: relative;
-}
-
 #enableSettings{
     background-color: transparent;
     border: none;
@@ -17,8 +12,8 @@ $gray: #F2F2F2;
     height: 50px;
     cursor: pointer;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     z-index: 2;
     background-image: url('../assets/icons8-settings-64.png');
     background-position: center center;
@@ -49,8 +44,7 @@ $gray: #F2F2F2;
 }
 
 .frame{
-    box-shadow: 10px 10px 10px rgba(96, 96, 96, 0.476);
-    animation: fadeIn 1s;
+    
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -59,7 +53,6 @@ $gray: #F2F2F2;
 
     .preview-header{
         min-height: 20px;
-        
         position: relative;
         resize: vertical;
         overflow: hidden;
@@ -108,6 +101,7 @@ $gray: #F2F2F2;
             position: relative;
             max-width: 723px;
             min-width: fit-content;
+            
         }
     
         .preview-right{

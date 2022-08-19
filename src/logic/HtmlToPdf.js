@@ -19,10 +19,10 @@ export default async function HtmlToPdf() {
     await html2canvas(html, {
         useCORS: true,
         allowTaint: true,
-        
     }).then((canvas) => {
-        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 5, 5);
-    })
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 5, 5); 
+    });
 
-    pdf.save('cv.pdf');
+    pdf.save('cv');
+    
 }
