@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.be08e305.css",
-    "main.js": "/static/js/main.67a991ff.js",
-    "static/js/703.76afe5a1.chunk.js": "/static/js/703.76afe5a1.chunk.js",
-    "static/js/760.ee5bf80c.chunk.js": "/static/js/760.ee5bf80c.chunk.js",
-    "static/media/logo.webp": "/static/media/logo.9cfa3579f19ad46852c7.webp",
-    "index.html": "/index.html",
-    "main.be08e305.css.map": "/static/css/main.be08e305.css.map",
-    "main.67a991ff.js.map": "/static/js/main.67a991ff.js.map",
-    "703.76afe5a1.chunk.js.map": "/static/js/703.76afe5a1.chunk.js.map",
-    "760.ee5bf80c.chunk.js.map": "/static/js/760.ee5bf80c.chunk.js.map"
+    "main.css": "/CV-creator/static/css/main.b487b1d0.css",
+    "main.js": "/CV-creator/static/js/main.549b7b7b.js",
+    "static/js/703.76afe5a1.chunk.js": "/CV-creator/static/js/703.76afe5a1.chunk.js",
+    "static/js/998.1773e423.chunk.js": "/CV-creator/static/js/998.1773e423.chunk.js",
+    "static/media/logo.webp": "/CV-creator/static/media/logo.9cfa3579f19ad46852c7.webp",
+    "index.html": "/CV-creator/index.html",
+    "main.b487b1d0.css.map": "/CV-creator/static/css/main.b487b1d0.css.map",
+    "main.549b7b7b.js.map": "/CV-creator/static/js/main.549b7b7b.js.map",
+    "703.76afe5a1.chunk.js.map": "/CV-creator/static/js/703.76afe5a1.chunk.js.map",
+    "998.1773e423.chunk.js.map": "/CV-creator/static/js/998.1773e423.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be08e305.css",
-    "static/js/main.67a991ff.js"
+    "static/css/main.b487b1d0.css",
+    "static/js/main.549b7b7b.js"
   ]
 }
