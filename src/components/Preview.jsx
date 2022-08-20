@@ -4,25 +4,12 @@ import {dragOverContainer, dragStart, dragEnd} from '../logic/dragAndDrop.js';
 import Customize from './CustomizePreview';
 import { useState } from 'react';
 
-export default function Preview({object, experience, education})
+export default function Preview({
+                                    object, experience, education, 
+                                    enableCustomize, setEnableCustomize,
+                                    settings, setSettings
+                                })
 {   
-
-    /*$dark-blue: #031059;
-    $blue: ;
-    $orange: #F24405;
-    $light-orange: #f2846b;
-    $gray: #F2F2F2;
-    */
-
-    const [enableCustomize, setEnableCustomize] = useState(false);
-    const [settings, setSettings] = useState({
-            mainColor: '#F24405',
-            secondaryColor: '#2C3D73',
-            ternaryColor: '#ffffff',
-            fontTitleColor: '#ffffff',
-            fontTextColor: '#000000',
-            fontSubTextColor: '#ffffff',
-    });
 
     function toggleCustomize()
     {
@@ -104,12 +91,12 @@ export default function Preview({object, experience, education})
                             draggable="true">
                                 {object[`eduDegree-${i}`]}
                             </p>}
-                        {object[`jobStart-${i}`] &&
+                        {object[`eduStart-${i}`] &&
                         <p className='date draggable'
                             onDragStart={dragStart}
                             onDragEnd={dragEnd}
                             draggable="true">
-                            ({object[`jobStart-${i}`]} {object[`jobEnd-${i}`]})
+                            ({object[`eduStart-${i}`]} {object[`eduEnd-${i}`]})
                         </p>}
                     </div>
                     

@@ -73,7 +73,7 @@ $gray: #F2F2F2;
 
     .preview-wrapper{
         display: grid;
-        grid-template-columns: .1fr 1fr .1fr;
+        grid-template-columns: .07fr 1fr .1fr;
         grid-template-rows: 1fr;
         height: 100%;
         max-width: 100%;
@@ -89,6 +89,7 @@ $gray: #F2F2F2;
             position: relative;
             width: max-content;
             max-width: 200px;
+            min-width: 10px;
         }
     
         .preview-main{
@@ -135,7 +136,7 @@ $gray: #F2F2F2;
     }
 
     .name{
-        max-width: 400px;
+        max-width: 600px;
         font-size: 2.5em;
         font-weight: bold;
         margin-bottom: 10px;
@@ -213,8 +214,10 @@ $gray: #F2F2F2;
     }
 
     .description{ 
-        font-weight: 600;
+        font-weight: 500;
         margin-left: 5px;   
+        max-width: 500px;
+        margin-top: 5px;
     }
 
     .description::before{
@@ -231,7 +234,7 @@ $gray: #F2F2F2;
 
     .experienceContent{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .educationContent{

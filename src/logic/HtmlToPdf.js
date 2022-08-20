@@ -5,8 +5,9 @@ import { useRef } from 'react'
 
 window.html2canvas = html2canvas;
 
-export default async function HtmlToPdf() {
+export default async function HtmlToPdf(e) {
     
+    e.preventDefault();
     
     const html = document.getElementById("printable");
 

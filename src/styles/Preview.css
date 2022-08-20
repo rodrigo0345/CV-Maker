@@ -75,7 +75,7 @@
 }
 .frame .preview-wrapper {
   display: grid;
-  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-columns: 0.07fr 1fr 0.1fr;
   grid-template-rows: 1fr;
   height: 100%;
   max-width: 100%;
@@ -92,6 +92,7 @@
   width: -moz-max-content;
   width: max-content;
   max-width: 200px;
+  min-width: 10px;
 }
 .frame .preview-wrapper .preview-main {
   display: flex;
@@ -138,7 +139,7 @@
   border: 1px solid #F24405;
 }
 .frame .name {
-  max-width: 400px;
+  max-width: 600px;
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 10px;
@@ -197,8 +198,10 @@
   margin-bottom: 10px;
 }
 .frame .description {
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 5px;
+  max-width: 500px;
+  margin-top: 5px;
 }
 .frame .description::before {
   content: "•";
@@ -212,7 +215,7 @@
 }
 .frame .experienceContent {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .frame .educationContent {
   grid-template-columns: 1fr 1fr;
