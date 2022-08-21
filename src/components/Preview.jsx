@@ -5,7 +5,8 @@ import Customize from './CustomizePreview';
 import { useState } from 'react';
 
 export default function Preview({
-                                    object, experience, education, 
+                                    object, experience, education,
+                                    skill, language,  
                                     enableCustomize, setEnableCustomize,
                                     settings, setSettings
                                 })
@@ -129,6 +130,46 @@ export default function Preview({
         return layout;
     }
 
+    // just displays <li> elements
+    function displaySkill()
+    {
+        const layout = [];
+        for(let i = 0; i < skill; i++)
+        {
+            const html = (
+                <li className='draggable'
+                    onDragStart={dragStart}
+                    onDragEnd={dragEnd}
+                    draggable="true">
+                    {object[`skill-${i}`]}
+                </li>
+            );
+            layout.push(html);
+        }
+        return layout;
+    }
+
+    // just displays <li> elements
+    function displayLanguage()
+    {
+        const layout = [];
+        for(let i = 0; i < language; i++)
+        {
+            const html = (
+                <li className='draggable'
+                    onDragStart={dragStart}
+                    onDragEnd={dragEnd}
+                    draggable="true">
+                        {object[`language-${i}`]}{object[`languageLevel-${i}`] 
+                        && 
+                        <span> - {object[`languageLevel-${i}`]}</span>}
+                </li>
+            );
+            layout.push(html);
+        }
+        return layout;
+    }
+
     return (
         <div id="preview">
             <div className="customization">
@@ -161,7 +202,9 @@ export default function Preview({
                             onDragOver={dragOverContainer} 
                             style={{backgroundColor: settings.ternaryColor}}
                     >
-            
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                     <div className='preview-main' onDragOver={dragOverContainer}
                     style={{color: settings.fontTextColor}}>
@@ -201,39 +244,65 @@ export default function Preview({
                                                 <hr />
                                                 {displayEducation()}
                                             </div>)}
+
                     </div>
                     <div className='preview-right' onDragOver={dragOverContainer} 
                     style={{backgroundColor: settings.secondaryColor, color: settings.fontSubTextColor}}>
-            
-                        {object.email &&<div className="email-wrapper draggable"
-                            onDragStart={dragStart}
-                            onDragEnd={dragEnd}
-                            draggable="true"
-                        >
-                            <p className="email-tag">Email</p>
-                            {object.email && <p className="email">{object.email}</p>}
-                        </div>}
+                        
+                        <div className="contact-wrap">
+                            <p className="contact">Contact</p>
+                            {object.email &&<div className="email-wrapper draggable"
+                                onDragStart={dragStart}
+                                onDragEnd={dragEnd}
+                                draggable="true"
+                            >
+                                <p className="email-tag">Email</p>
+                                {object.email && <p className="email">{object.email}</p>}
+                            </div>}
+                            {object.phone && <div className="phone-wrapper draggable"
+                                onDragStart={dragStart}
+                                onDragEnd={dragEnd}
+                                draggable="true"
+                            >
+                                <p className="phone-tag">Phone</p>
+                                <p className='phone'>{object.phone}</p>
+                            </div>}
+                            {object.city && <div className="city-wrapper draggable"
+                                onDragStart={dragStart}
+                                onDragEnd={dragEnd}
+                                draggable="true"
+                            >
+                                <p className="city-tag">City</p>
+                                {object.city && <p className='city'>{object.city}</p>}
+                            </div>}
+                        </div>
 
+                        {skill > 0 && (<div className='draggable skill-bigWrap'
+                                                onDragStart={dragStart}
+                                                onDragEnd={dragEnd}
+                                                draggable="true"
+                                                onDragOver={dragOverContainer}>
+                                                <p className='skill'>Skills</p>
+                                                <ul className="skillContent" 
+                                                    type="none">
+                                                    {displaySkill()}
+                                                </ul>
+                                            </div>)}
 
-                        {object.phone && <div className="phone-wrapper draggable"
-                            onDragStart={dragStart}
-                            onDragEnd={dragEnd}
-                            draggable="true"
-                        >
-                            <p className="phone-tag">Phone</p>
-                            <p className='phone'>{object.phone}</p>
-                        </div>}
-
-                        {object.city && <div className="city-wrapper draggable"
-                            onDragStart={dragStart}
-                            onDragEnd={dragEnd}
-                            draggable="true"
-                        >
-                            <p className="city-tag">City</p>
-                            {object.city && <p className='city'>{object.city}</p>}
-                        </div>}
+                        {language > 0 && (<div className='draggable language-bigWrap'
+                                                onDragStart={dragStart}
+                                                onDragEnd={dragEnd}
+                                                draggable="true"
+                                                onDragOver={dragOverContainer}>
+                                                <p className='language'>Languages</p>
+                                                <ul className="languageContent"
+                                                    type="none">
+                                                    {displayLanguage()}
+                                                </ul>
+                                            </div>)}
 
                     </div>
+
                 </div>
                 <div className='preview-footer' onDragOver={dragOverContainer}
                 style={{backgroundColor: settings.mainColor, color: settings.fontTitleColor}}>

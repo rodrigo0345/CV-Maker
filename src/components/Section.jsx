@@ -12,6 +12,9 @@ export default function Section(){
     const [mainObject, setMainObject] = useState([]);
     const experience = useState(1);
     const education = useState(1);
+    const skill = useState(1);
+    const language = useState(1);
+
     const [enableCustomize, setEnableCustomize] = useState(false);
     const [settings, setSettings] = useState({
             mainColor: '#F24405',
@@ -24,7 +27,7 @@ export default function Section(){
     
     /* replace the default values with the saved Client's values */
     useEffect(() => {
-        const retrive = ["mainObject", "experience", "education", "settings"];
+        const retrive = ["mainObject", "experience", "education", "settings", "skill", "language"];
         const saved = save.getStates(retrive);
 
         saved.map(item => {
@@ -41,6 +44,12 @@ export default function Section(){
             }
             else if(key === "education"){
                 education[1](value);
+            }
+            else if(key === "skill"){
+                skill[1](value);
+            }
+            else if(key === "language"){
+                language[1](value);
             }
             else if(key === "settings"){
                 setSettings(value);
@@ -77,6 +86,12 @@ export default function Section(){
                                 education: education[0]
                             },
                             {
+                                skill: skill[0]
+                            },
+                            {
+                                language: language[0]
+                            },
+                            {
                                 settings: settings
                             } 
                         ];
@@ -103,6 +118,26 @@ export default function Section(){
     function subtractEducation(e){
         e.preventDefault();
         education[1](prev => prev - 1);
+    }
+
+    function addSkill(e){
+        e.preventDefault();
+        skill[1](prev => prev + 1);
+    }
+
+    function subtractSkill(e){
+        e.preventDefault();
+        skill[1](prev => prev - 1);
+    }
+
+    function addLanguage(e){
+        e.preventDefault();
+        language[1](prev => prev + 1);
+    }
+
+    function subtractLanguage(e){
+        e.preventDefault();
+        language[1](prev => prev - 1);
     }
 
     function onChange(event){
@@ -158,6 +193,8 @@ export default function Section(){
                     object={mainObject}
                     experience={[experience[0], addExperience, subtractExperience]}
                     education={[education[0], addEducation, subtractEducation]}
+                    skill={[skill[0], addSkill, subtractSkill]}
+                    language={[language[0], addLanguage, subtractLanguage]}
                     saveStates={saveAllStates}
                     reset={resetStatesAndStorage}
                 />
@@ -167,6 +204,8 @@ export default function Section(){
                     object={mainObject}
                     experience={experience[0]}
                     education={education[0]}
+                    skill={skill[0]}
+                    language={language[0]}
                     enableCustomize={enableCustomize}
                     setEnableCustomize={setEnableCustomize}
                     settings={settings}

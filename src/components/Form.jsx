@@ -2,7 +2,7 @@ import '../styles/Form.css';
 import HtmlToPdf from '../logic/HtmlToPdf';
 import { useReactToPrint } from 'react-to-print'
 
-export default function Form({changes, experience, education, saveStates, object, reset})
+export default function Form({changes, experience, education, skill, language, saveStates, object, reset})
 {
     const numExperiences = experience[0];
     const addExp = experience[1];
@@ -11,6 +11,14 @@ export default function Form({changes, experience, education, saveStates, object
     const numEducations = education[0];
     const addEdu = education[1];
     const subEdu = education[2];
+
+    const numSkills = skill[0];
+    const addSkill = skill[1];
+    const subSkill = skill[2];
+
+    const numLanguages = language[0];
+    const addLanguage = language[1];
+    const subLanguage = language[2];
 
     const experiences = () => {
         const date = new Date();
@@ -31,7 +39,7 @@ export default function Form({changes, experience, education, saveStates, object
                     <input type="date" name={`jobEnd-${i}`} placeholder="End date" value={object[`jobEnd-${i}`]}/>
                     <textarea name={`jobDescription-${i}`} placeholder='Description' value={object[`jobDescription-${i}`]}/>
 
-                    <button onClick={subExp}>Delete</button>
+                    <button onClick={subExp} className="delete">Delete</button>
                 </div>
             );
             layout.push(html);
@@ -57,13 +65,46 @@ export default function Form({changes, experience, education, saveStates, object
                     <input type="date" name={`eduEnd-${i}`} placeholder="End date" value={object[`eduEnd-${i}`]}/>
                     <textarea name={`eduDescription-${i}`} placeholder='Description' value={object[`eduDescription-${i}`]} />
 
-                    <button onClick={subEdu}>Delete</button>
+                    <button onClick={subEdu} className="delete">Delete</button>
                 </div>
             );
             layout.push(html);
         }
         return layout;
     } 
+
+    const skills = () => {
+        const layout = [];
+
+        for(let i = 0; i < numSkills; i++)
+        {
+            const html = (
+                <div id={`skill-${i}`} className={'skill'}>
+                    <input type="text" name={`skill-${i}`} placeholder="Skill" value={object[`skill-${i}`]}/>
+                    <button onClick={subSkill} className="delete">Delete</button>
+                </div>
+            );
+            layout.push(html);
+        }
+        return layout;
+    }
+
+    const languages = () => {
+        const layout = [];
+
+        for(let i = 0; i < numLanguages; i++)
+        {
+            const html = (
+                <div id={`language-${i}`} className={'language'}>
+                    <input type="text" name={`language-${i}`} placeholder="Language" value={object[`language-${i}`]}/>
+                    <input type="text" name={`languageLevel-${i}`} placeholder="Level" value={object[`languageLevel-${i}`]}/>
+                    <button onClick={subLanguage} className="delete">Delete</button>
+                </div>
+            );
+            layout.push(html);
+        }
+        return layout;
+    }
 
 
     return (
@@ -91,11 +132,21 @@ export default function Form({changes, experience, education, saveStates, object
             {educations()}
             <button className="add" type="none" onClick={addEdu}>Add</button>
 
-            <button onClick={reset}>Reset</button>
+            <h2>Skills</h2>
+            <hr />
+            {skills()}
+            <button className="add" type="none" onClick={addSkill}>Add</button>
 
-            <button onClick={saveStates}>Save</button>
+            <h2>Languages</h2>
+            <hr />
+            {languages()}
+            <button className="add" type="none" onClick={addLanguage}>Add</button>
 
-            <button onClick={HtmlToPdf}>Download Pdf</button>
+            <button onClick={reset} id="reset">Reset</button>
+
+            <button onClick={saveStates} id="save">Save</button>
+
+            <button onClick={HtmlToPdf} id="pdf">Download Pdf</button>
         </form>
     )
 }

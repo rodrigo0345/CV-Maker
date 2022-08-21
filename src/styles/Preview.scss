@@ -80,16 +80,17 @@ $gray: #F2F2F2;
         position: relative;
 
         .preview-left{
-            display: flex;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
             flex-wrap: wrap;
             flex-direction: column;
             
             height: 100%;
             padding: 20px;
             position: relative;
-            width: max-content;
             max-width: 200px;
             min-width: 10px;
+            width: max-content;
         }
     
         .preview-main{
@@ -106,7 +107,8 @@ $gray: #F2F2F2;
         }
     
         .preview-right{
-            display: flex;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
             flex-wrap: wrap;
             flex-direction: column;
             gap: 20px;
@@ -157,56 +159,60 @@ $gray: #F2F2F2;
             max-width: 400px;
             font-size: .8em;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .email-tag{
-            max-width: 400px;
+            max-width: 380px;
             font-size: 1em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 3px;
         }
     }
 
     .phone-wrapper{
 
         .phone{
-            max-width: 400px;
+            max-width: 380px;
             font-size: .8em;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .phone-tag{
-            max-width: 400px;
+            max-width: 380px;
             font-size: 1em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 3px;
         }
     }
 
     .city-wrapper{
             
             .city{
-                max-width: 400px;
+                max-width: 380px;
                 font-size: .8em;
                 font-weight: bold;
                 margin-bottom: 10px;
             }
 
             .city-tag{
-                max-width: 400px;
+                max-width: 380px;
                 font-size: 1em;
                 font-weight: bold;
-                margin-bottom: 10px;
+                margin-bottom: 3px;
             }
     }
 
 
-    .about-me, .education, .experience{
+    .about-me, .education, .experience, .skill, .language, .contact{
         max-width: 400px;
         font-size: 1.6em;
         font-weight: bold;
+    }
+
+    .contact{
+        margin-bottom: 10px;
     }
 
     hr{
@@ -241,6 +247,31 @@ $gray: #F2F2F2;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
+    .language-bigWrap, .skill-bigWrap{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 190px;
+        min-width: 100px;
+
+        .languageContent, .skillContent{
+            align-self: flex-start;
+            font-weight: 600; 
+            font-size: 1em;
+            max-width: 170px;
+            margin: 10px 0 3px 0;
+        }
+        
+
+        li::before{
+            content: "•";
+            margin-right: 5px;
+        }
+
+    }
+    
 
     .title-t{
         margin-top: 10px;
@@ -277,5 +308,4 @@ $gray: #F2F2F2;
             margin-right: 5px;
         }
     }
-
 }
