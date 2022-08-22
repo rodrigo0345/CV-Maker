@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/CV-creator/static/css/main.b550aa9d.css",
-    "main.js": "/CV-creator/static/js/main.01f68533.js",
-    "static/js/703.76afe5a1.chunk.js": "/CV-creator/static/js/703.76afe5a1.chunk.js",
-    "static/js/998.1773e423.chunk.js": "/CV-creator/static/js/998.1773e423.chunk.js",
-    "static/media/logo.webp": "/CV-creator/static/media/logo.9cfa3579f19ad46852c7.webp",
-    "index.html": "/CV-creator/index.html",
-    "main.b550aa9d.css.map": "/CV-creator/static/css/main.b550aa9d.css.map",
-    "main.01f68533.js.map": "/CV-creator/static/js/main.01f68533.js.map",
-    "703.76afe5a1.chunk.js.map": "/CV-creator/static/js/703.76afe5a1.chunk.js.map",
-    "998.1773e423.chunk.js.map": "/CV-creator/static/js/998.1773e423.chunk.js.map"
+    "main.css": "/CV-Maker/static/css/main.b550aa9d.css",
+    "main.js": "/CV-Maker/static/js/main.579241c8.js",
+    "static/js/703.76afe5a1.chunk.js": "/CV-Maker/static/js/703.76afe5a1.chunk.js",
+    "static/js/998.1773e423.chunk.js": "/CV-Maker/static/js/998.1773e423.chunk.js",
+    "static/media/logo.webp": "/CV-Maker/static/media/logo.9cfa3579f19ad46852c7.webp",
+    "index.html": "/CV-Maker/index.html",
+    "main.b550aa9d.css.map": "/CV-Maker/static/css/main.b550aa9d.css.map",
+    "main.579241c8.js.map": "/CV-Maker/static/js/main.579241c8.js.map",
+    "703.76afe5a1.chunk.js.map": "/CV-Maker/static/js/703.76afe5a1.chunk.js.map",
+    "998.1773e423.chunk.js.map": "/CV-Maker/static/js/998.1773e423.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b550aa9d.css",
-    "static/js/main.01f68533.js"
+    "static/js/main.579241c8.js"
   ]
 }
