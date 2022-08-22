@@ -1,6 +1,6 @@
 # Usage
 
-Live demo: [Demo](https://rodrigo0345.github.io/CV-Maker/) [not working] 
+Live demo: [Demo](https://rodrigo0345.github.io/CV-Maker/) [not working]
 
 ## Available Scripts
 
@@ -44,12 +44,15 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 This project was made with react and as such I will devide the explanation into different components.
 
 ## App.jsx
+
 This component is responsible to render the entire page.
 Inside of App we have other 2 components, the Header and the Section, where the section is the actual responsible for most of the program.
 Note: **In index.css we set some global Css for an ease of use.**
 
 ## Section.jsx
+
 Inside section we have a lot of functions and states:
+
 - experience, education, skill and language are there to just act as counters and are later used inside the Form and Preview components ( this could be improved because this values could be just stored inside the "mainObject" state)
 - enableCustomize is just toggling the options menu to change the colors of the CV preview. (Again, could be improved in the future)
 - settings stores the colors choosen by the user and enables us to save this state into localStorage.
@@ -58,5 +61,5 @@ Inside section we have a lot of functions and states:
 The Section is divided into 2 main components (Form and Preview)
 
 ## Form.jsx
-Includes the actual inputs and also the options to save, reset and print the Preview component as a pdf.
 
+Includes the actual inputs and also the options to save, reset and print the Preview component as a pdf.
