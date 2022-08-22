@@ -25,7 +25,7 @@ export default function Section(){
             fontSubTextColor: '#ffffff',
     });
     
-    /* replace the default values with the saved Client's values */
+    /* replace the default values with the saved Client's values inside localStorage */
     useEffect(() => {
         const retrive = ["mainObject", "experience", "education", "settings", "skill", "language"];
         const saved = save.getStates(retrive);
