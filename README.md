@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Usage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live demo: [Demo](https://rodrigo0345.github.io/CV-Maker/) [not working] 
 
 ## Available Scripts
 
@@ -39,32 +39,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Basic Explanation of the code and files systems
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project was made with react and as such I will devide the explanation into different components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## App.jsx
+This component is responsible to render the entire page.
+Inside of App we have other 2 components, the Header and the Section, where the section is the actual responsible for most of the program.
+Note: **In index.css we set some global Css for an ease of use.**
 
-### Code Splitting
+## Section.jsx
+Inside section we have a lot of functions and states:
+- experience, education, skill and language are there to just act as counters and are later used inside the Form and Preview components ( this could be improved because this values could be just stored inside the "mainObject" state)
+- enableCustomize is just toggling the options menu to change the colors of the CV preview. (Again, could be improved in the future)
+- settings stores the colors choosen by the user and enables us to save this state into localStorage.
+- mainObject stores all the actual "important" information as it enables us to write on the Form, display what we wrote on the Form onto the preview and to store the information into localStorage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The Section is divided into 2 main components (Form and Preview)
 
-### Analyzing the Bundle Size
+## Form.jsx
+Includes the actual inputs and also the options to save, reset and print the Preview component as a pdf.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
