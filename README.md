@@ -45,7 +45,7 @@ This project was made with react and as such I will devide the explanation into 
 
 ## App.jsx
 This component is responsible to render the entire page.
-Inside of App we have other 2 components, the Header and the Section, where the section is the actual responsible for most of the program.
+Inside of the App component we have other 2 components, the Header and the Section, where the section is responsible for most of the program.
 Note: **In index.css we set some global Css for an ease of use.**
 
 ## Section.jsx
