@@ -6,7 +6,7 @@ export default class Save{
     }
 
     saveStates(states = []){
-        states.map(state => {
+        states.forEach(state => {
             const key = Object.keys(state)[0];
             const value = Object.values(state);
             localStorage.setItem(key, JSON.stringify(value));
@@ -16,7 +16,7 @@ export default class Save{
     getStates(stateNames = []){
         return stateNames.map(stateName => {
             const state = JSON.parse(localStorage.getItem(stateName));
-            if(state === undefined || state === null) return;
+            if(state === undefined || state === null) return undefined;
             const key = {};
             key[stateName] = state[0];
             return key;

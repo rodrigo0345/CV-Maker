@@ -1,9 +1,8 @@
 import Form from './Form';
 import Preview from './Preview';
 import '../styles/Section.css';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Save from '../logic/save.js';
-import { useEffect } from 'react';
 
 export default function Section(){
 
@@ -30,8 +29,9 @@ export default function Section(){
         const retrive = ["mainObject", "experience", "education", "settings", "skill", "language"];
         const saved = save.getStates(retrive);
 
-        saved.map(item => {
+        saved.forEach(item => {
             if (item === null || item === undefined) return;
+
             const key = Object.keys(item)[0];
             
             const value = Object.values(Object.values(item))[0];

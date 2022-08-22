@@ -1,6 +1,5 @@
 import '../styles/Form.css';
 import HtmlToPdf from '../logic/HtmlToPdf';
-import { useReactToPrint } from 'react-to-print'
 
 export default function Form({changes, experience, education, skill, language, saveStates, object, reset})
 {

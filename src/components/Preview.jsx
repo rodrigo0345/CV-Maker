@@ -2,7 +2,6 @@ import '../styles/Preview.css';
 import '../styles/DragAndDrop.css';
 import {dragOverContainer, dragStart, dragEnd} from '../logic/dragAndDrop.js';
 import Customize from './CustomizePreview';
-import { useState } from 'react';
 
 export default function Preview({
                                     object, experience, education,

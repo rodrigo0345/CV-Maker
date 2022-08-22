@@ -1,7 +1,5 @@
 import { jsPDF } from "jspdf";
-import html2canvas from 'html2canvas'
-import { useReactToPrint } from 'react-to-print'
-import { useRef } from 'react'
+import html2canvas from 'html2canvas';
 
 window.html2canvas = html2canvas;
 
