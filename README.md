@@ -1,6 +1,6 @@
 # Usage
 
-Live demo: [Demo](https://rodrigo0345.github.io/CV-Maker/) [not working] 
+Live demo: [Demo](https://rodrigo0345.github.io/CV-Maker/) [fixed] 
 
 ## Available Scripts
 
