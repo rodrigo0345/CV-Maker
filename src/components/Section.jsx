@@ -26,8 +26,8 @@ export default function Section(){
     
     /* replace the default values with the saved Client's values inside localStorage */
     useEffect(() => {
-        const retrive = ["mainObject", "experience", "education", "settings", "skill", "language"];
-        const saved = save.getStates(retrive);
+        const retrieve = ["mainObject", "experience", "education", "settings", "skill", "language"];
+        const saved = save.getStates(retrieve);
 
         saved.forEach(item => {
             if (item === null || item === undefined) return;
@@ -175,16 +175,7 @@ export default function Section(){
         <section>
 
             <div className="buttons">
-                <button 
-                    onClick={appear} 
-                    id="btn-prv">
-                    Preview
-                </button>
-                <button 
-                    onClick={appear}
-                    id="btn-rgs">
-                    Register
-                </button>
+                <p>This app does not support devices with less than 900px of width.</p>
             </div>
 
             <div className="content">
